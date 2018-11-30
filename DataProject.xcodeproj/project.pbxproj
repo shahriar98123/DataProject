@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		10591BAD21AC7F8E0070C19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10591BAC21AC7F8E0070C19A /* AppDelegate.swift */; };
-		10591BAF21AC7F8E0070C19A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10591BAE21AC7F8E0070C19A /* ViewController.swift */; };
 		10591BB221AC7F8E0070C19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10591BB021AC7F8E0070C19A /* Main.storyboard */; };
 		10591BB421AC7F8E0070C19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10591BB321AC7F8E0070C19A /* Assets.xcassets */; };
 		10591BB721AC7F8E0070C19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10591BB521AC7F8E0070C19A /* LaunchScreen.storyboard */; };
+		10E7F27421B1BC44000E1EAB /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7F27321B1BC44000E1EAB /* BucketItem.swift */; };
+		10E7F27721B1BCA5000E1EAB /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7F27621B1BCA5000E1EAB /* DataViewController.swift */; };
+		10E7F27921B1BCDD000E1EAB /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7F27821B1BCDD000E1EAB /* BucketItemCell.swift */; };
+		10E7F27B21B1BD4E000E1EAB /* bucket18.csv in Resources */ = {isa = PBXBuildFile; fileRef = 10E7F27A21B1BD4E000E1EAB /* bucket18.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10591BA921AC7F8E0070C19A /* DataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10591BAC21AC7F8E0070C19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10591BAE21AC7F8E0070C19A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		10591BB121AC7F8E0070C19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10591BB321AC7F8E0070C19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10591BB621AC7F8E0070C19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10591BB821AC7F8E0070C19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E7F27321B1BC44000E1EAB /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
+		10E7F27621B1BCA5000E1EAB /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		10E7F27821B1BCDD000E1EAB /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
+		10E7F27A21B1BD4E000E1EAB /* bucket18.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bucket18.csv; path = ../../../../Downloads/bucket18.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		10591BA021AC7F8E0070C19A = {
 			isa = PBXGroup;
 			children = (
+				10E7F27521B1BC57000E1EAB /* Model */,
 				10591BAB21AC7F8E0070C19A /* DataProject */,
 				10591BAA21AC7F8E0070C19A /* Products */,
 			);
@@ -54,14 +61,48 @@
 		10591BAB21AC7F8E0070C19A /* DataProject */ = {
 			isa = PBXGroup;
 			children = (
-				10591BAC21AC7F8E0070C19A /* AppDelegate.swift */,
-				10591BAE21AC7F8E0070C19A /* ViewController.swift */,
-				10591BB021AC7F8E0070C19A /* Main.storyboard */,
-				10591BB321AC7F8E0070C19A /* Assets.xcassets */,
-				10591BB521AC7F8E0070C19A /* LaunchScreen.storyboard */,
-				10591BB821AC7F8E0070C19A /* Info.plist */,
+				10591BC321AC80340070C19A /* Controller */,
+				10591BBE21AC7FA60070C19A /* Resources */,
+				10591BBF21AC7FF00070C19A /* View */,
 			);
 			path = DataProject;
+			sourceTree = "<group>";
+		};
+		10591BBE21AC7FA60070C19A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10E7F27A21B1BD4E000E1EAB /* bucket18.csv */,
+				10591BAC21AC7F8E0070C19A /* AppDelegate.swift */,
+				10591BB321AC7F8E0070C19A /* Assets.xcassets */,
+				10591BB821AC7F8E0070C19A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10591BBF21AC7FF00070C19A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10591BB021AC7F8E0070C19A /* Main.storyboard */,
+				10591BB521AC7F8E0070C19A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10591BC321AC80340070C19A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10E7F27621B1BCA5000E1EAB /* DataViewController.swift */,
+				10E7F27821B1BCDD000E1EAB /* BucketItemCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10E7F27521B1BC57000E1EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10E7F27321B1BC44000E1EAB /* BucketItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10591BB721AC7F8E0070C19A /* LaunchScreen.storyboard in Resources */,
+				10E7F27B21B1BD4E000E1EAB /* bucket18.csv in Resources */,
 				10591BB421AC7F8E0070C19A /* Assets.xcassets in Resources */,
 				10591BB221AC7F8E0070C19A /* Main.storyboard in Resources */,
 			);
@@ -135,7 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10591BAF21AC7F8E0070C19A /* ViewController.swift in Sources */,
+				10E7F27921B1BCDD000E1EAB /* BucketItemCell.swift in Sources */,
+				10E7F27721B1BCA5000E1EAB /* DataViewController.swift in Sources */,
+				10E7F27421B1BC44000E1EAB /* BucketItem.swift in Sources */,
 				10591BAD21AC7F8E0070C19A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,14 +324,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DataProject/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/DataProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.DataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,14 +343,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DataProject/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/DataProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.DataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
